@@ -18,7 +18,7 @@ if [[ $(ps aux | grep -i sftp | grep -i $username@$router) ]]; then
 fi
 
 # mount router fs by ssh
-sshfs -o password_stdin $username@$router:/ "$mountpoint" <<< '45ter01d'
+sshfs -o password_stdin $username@$router:/ "$mountpoint" <<< 'password'
 
 # open mounted point with file manager
 thunar $mountpoint
